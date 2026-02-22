@@ -67,6 +67,22 @@ We have provided ready-to-use examples for various frameworks in the `examples/`
 | `version` | Text displayed in the top right corner. | `v1.0.0`|
 | `lang`    | Language for the tooltips (`en`, `fr`, `es`, `de`, `it`, `pt`, `ru`, `ar`, `zh`, `ja`, `ko`, `hi`). | `en` |
 
+## Supported Languages
+
+DEMO-SCORE natively supports 12 languages for its global and level-specific tooltips:
+- **English** (`en`)
+- **French** (`fr`)
+- **Spanish** (`es`)
+- **German** (`de`)
+- **Italian** (`it`)
+- **Portuguese** (`pt`)
+- **Russian** (`ru`)
+- **Arabic** (`ar`)
+- **Simplified Chinese** (`zh`)
+- **Japanese** (`ja`)
+- **Korean** (`ko`)
+- **Hindi** (`hi`)
+
 ## The 5 Maturity Levels
 
 * **D (Draft)**: Proof of concept. Unstable API subject to breaking changes. Not for production.
