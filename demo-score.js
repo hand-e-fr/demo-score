@@ -40,6 +40,116 @@ const TRANSLATIONS = {
             O: { label: 'Optimisé', desc: 'Performances vérifiées et documentation complète. Suit les meilleures pratiques.' },
             S: { label: 'Stable', desc: 'Prêt pour la production (LTS). Accessibilité et performances totalement validées.' }
         }
+    },
+    es: {
+        globalTitle: 'Acerca de DEMO-SCORE',
+        globalDesc: 'Un indicador visual de madurez para componentes:',
+        levels: {
+            D: { label: 'Borrador', desc: 'Prueba de concepto. API inestable sujeta a cambios importantes. No para producción.' },
+            E: { label: 'En evolución', desc: 'Funcionalidad principal posicionada. Sujeto a ajustes y refactorización.' },
+            M: { label: 'Maduro', desc: 'Estable para uso general. Pruebas unitarias OK. API confiable.' },
+            O: { label: 'Optimizado', desc: 'Rendimiento verificado y documentación completa. Sigue las mejores prácticas.' },
+            S: { label: 'Estable', desc: 'Listo para producción (LTS). Accesibilidad y rendimiento totalmente validados.' }
+        }
+    },
+    de: {
+        globalTitle: 'Über DEMO-SCORE',
+        globalDesc: 'Ein visueller Reifeindikator für Komponenten:',
+        levels: {
+            D: { label: 'Entwurf', desc: 'Machbarkeitsstudie. Instabile API, die breaking changes unterliegt. Nicht für die Produktion.' },
+            E: { label: 'In Entwicklung', desc: 'Hauptfunktionalität vorhanden. Unterliegt Anpassungen und Refactoring.' },
+            M: { label: 'Ausgereift', desc: 'Stabil für den allgemeinen Gebrauch. Komponententests OK. Zuverlässige API.' },
+            O: { label: 'Optimiert', desc: 'Leistung verifiziert und Dokumentation vollständig. Folgt Best Practices.' },
+            S: { label: 'Stabil', desc: 'Produktionsbereit (LTS). Barrierefreiheit und Leistung vollständig validiert.' }
+        }
+    },
+    it: {
+        globalTitle: 'Informazioni su DEMO-SCORE',
+        globalDesc: 'Un indicatore visivo di maturità per i componenti:',
+        levels: {
+            D: { label: 'Bozza', desc: 'Proof of concept. API instabile soggetta a modifiche importanti. Non per la produzione.' },
+            E: { label: 'In evoluzione', desc: 'Funzionalità principale sul posto. Soggetto a modifiche e refactoring.' },
+            M: { label: 'Maturo', desc: 'Stabile per uso generale. Test unitari OK. API affidabile.' },
+            O: { label: 'Ottimizzato', desc: 'Prestazioni verificate e documentazione completa. Segue le migliori pratiche.' },
+            S: { label: 'Stabile', desc: 'Pronto per la produzione con supporto LTS. Accessibilità e prestazioni convalidate.' }
+        }
+    },
+    pt: {
+        globalTitle: 'Sobre o DEMO-SCORE',
+        globalDesc: 'Um indicador visual de maturidade para componentes:',
+        levels: {
+            D: { label: 'Rascunho', desc: 'Prova de conceito. API instável sujeita a mudanças drásticas. Não usar em produção.' },
+            E: { label: 'Em evolução', desc: 'Funcionalidade principal implementada. Sujeito a ajustes e refatoração.' },
+            M: { label: 'Maduro', desc: 'Estável para uso geral. Testes unitários OK. API confiável.' },
+            O: { label: 'Otimizado', desc: 'Desempenho verificado e documentação completa. Segue as melhores práticas.' },
+            S: { label: 'Estável', desc: 'Pronto para produção (LTS). Acessibilidade e desempenho totalmente validados.' }
+        }
+    },
+    ru: {
+        globalTitle: 'О DEMO-SCORE',
+        globalDesc: 'Визуальный индикатор зрелости компонентов:',
+        levels: {
+            D: { label: 'Черновик', desc: 'Проверка концепции. Нестабильный API, возможны критические изменения.' },
+            E: { label: 'В разработке', desc: 'Основной функционал реализован. Возможны доработки и рефакторинг.' },
+            M: { label: 'Зрелый', desc: 'Стабилен для общего использования. Модульные тесты пройдены. Надежный API.' },
+            O: { label: 'Оптимизированный', desc: 'Производительность проверена, документация полная. Соответствует лучшим практикам.' },
+            S: { label: 'Стабильный', desc: 'Готов к производству (LTS). Доступность и производительность полностью подтверждены.' }
+        }
+    },
+    ar: {
+        globalTitle: 'حول DEMO-SCORE',
+        globalDesc: 'مؤشر النضج المرئي للمكونات:',
+        levels: {
+            D: { label: 'مسودة', desc: 'إثبات المفهوم. واجهة برمجة تطبيقات غير مستقرة عرضة لتغييرات جذرية. ليس للإنتاج.' },
+            E: { label: 'قيد التطوير', desc: 'الوظائف الأساسية جاهزة. يخضع للتعديلات وإعادة الهيكلة.' },
+            M: { label: 'ناضج', desc: 'مستقر للاستخدام العام. تم اجتياز اختبارات الوحدة. واجهة موثوقة.' },
+            O: { label: 'مُحسّن', desc: 'تم التحقق من الأداء واكتمال التوثيق. يتبع أفضل الممارسات.' },
+            S: { label: 'مستقر', desc: 'جاهز للإنتاج (LTS). تم التحقق من إمكانية الوصول والأداء بالكامل.' }
+        }
+    },
+    zh: {
+        globalTitle: '关于 DEMO-SCORE',
+        globalDesc: '组件的视觉成熟度指示器：',
+        levels: {
+            D: { label: '草稿', desc: '概念验证。不稳定的 API，可能会发生破坏性更改。不可用于生产环境。' },
+            E: { label: '演进中', desc: '主要功能已就绪。可能会进行调整和重构。' },
+            M: { label: '成熟', desc: '稳定，适合通用。单元测试通过（>70%）。API 可靠。' },
+            O: { label: '已优化', desc: '性能已验证，文档完整。遵循行业最佳实践。' },
+            S: { label: '稳定', desc: '生产就绪 (LTS) 并在可访问性和性能上得到了充分验证。' }
+        }
+    },
+    ja: {
+        globalTitle: 'DEMO-SCORE について',
+        globalDesc: 'コンポーネントの視覚的な成熟度インジケーター:',
+        levels: {
+            D: { label: '草案', desc: '概念実証。破壊的な変更を伴う不安定な API。本番環境向けではありません。' },
+            E: { label: '発展中', desc: '主要機能は実装済み。調整やリファクタリングの影響を受けます。' },
+            M: { label: '成熟', desc: '一般的な使用において安定。単体テスト完了。信頼できる API。' },
+            O: { label: '最適化済み', desc: 'パフォーマンスが検証され、ドキュメントが完全。ベストプラクティスに準拠。' },
+            S: { label: '安定', desc: '本番環境で利用可能 (LTS)。アクセシビリティとパフォーマンスが完全に検証されています。' }
+        }
+    },
+    ko: {
+        globalTitle: 'DEMO-SCORE 정보',
+        globalDesc: '컴포넌트의 시각적 성숙도 지표:',
+        levels: {
+            D: { label: '초안', desc: '개념 증명. 호환성이 깨지는 변경이 발생할 수 있는 불안정한 API. 프로덕션용이 아님.' },
+            E: { label: '진화 중', desc: '주요 기능이 구현됨. 조정 및 리팩토링 대상.' },
+            M: { label: '성숙', desc: '일반적인 사용에 안정적. 단위 테스트 성공. 신뢰할 수 있는 API.' },
+            O: { label: '최적화됨', desc: '성능 검증 완료 및 문서화 완료. 모범 사례 준수.' },
+            S: { label: '안정', desc: '프로덕션 준비 완료(LTS). 접근성 및 성능 완벽 검증.' }
+        }
+    },
+    hi: {
+        globalTitle: 'DEMO-SCORE के बारे में',
+        globalDesc: 'घटकों के लिए एक दृश्य परिपक्वता संकेतक:',
+        levels: {
+            D: { label: 'ड्राफ़्ट', desc: 'प्रूफ ऑफ कॉन्सेप्ट। अस्थिर API में बड़े बदलाव हो सकते हैं। उत्पादन के लिए नहीं।' },
+            E: { label: 'विकसित हो रहा है', desc: 'मुख्य कार्यक्षमता तैयार है। परिवर्तन और रिफैक्टरिंग के अधीन।' },
+            M: { label: 'परिपक्व', desc: 'सामान्य उपयोग के लिए स्थिर। यूनिट परीक्षण ठीक हैं। विश्वसनीय API।' },
+            O: { label: 'अनुकूलित', desc: 'प्रदर्शन सत्यापित और दस्तावेज़ीकरण पूर्ण हुआ। सर्वोत्तम प्रथाओं का पालन करता है।' },
+            S: { label: 'स्थिर', desc: 'उत्पादन के लिए तैयार (LTS)। पहुँच और प्रदर्शन पूरी तरह से मान्य हैं।' }
+        }
     }
 };
 

@@ -45,7 +45,15 @@ import '@hand-e/demo-score';
 <script src="https://cdn.jsdelivr.net/gh/hand-e-fr/demo-score@main/demo-score.js"></script>
 ```
 
-### 2. Use it anywhere
+### 2. Check the Examples
+
+We have provided ready-to-use examples for various frameworks in the `examples/` directory:
+- **Vanilla HTML**: Open `examples/vanilla-html/index.html` directly in your browser. Or view it online: [Live Vanilla HTML Preview](https://htmlpreview.github.io/?https://github.com/hand-e-fr/demo-score/blob/main/examples/vanilla-html/index.html)
+- **React**: Navigate to `examples/react/`
+- **Vue 3**: Navigate to `examples/vue/`
+- **Angular**: Navigate to `examples/angular/`
+
+### 3. Use it anywhere
 
 ```html
 <demo-score level="M" version="v1.0.0" lang="en"></demo-score>
@@ -57,7 +65,7 @@ import '@hand-e/demo-score';
 |-----------|-------------|---------|
 | `level`   | Maturity level (`D`, `E`, `M`, `O`, `S`). See details below. | `D` |
 | `version` | Text displayed in the top right corner. | `v1.0.0`|
-| `lang`    | Language for the tooltips (`en`, `fr`). | `en` |
+| `lang`    | Language for the tooltips (`en`, `fr`, `es`, `de`, `it`, `pt`, `ru`, `ar`, `zh`, `ja`, `ko`, `hi`). | `en` |
 
 ## The 5 Maturity Levels
 
