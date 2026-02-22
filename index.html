@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Score Test</title>
+    <style>
+        body {
+            background-color: #f8fafc;
+            font-family: system-ui, sans-serif;
+            padding: 40px;
+            color: #334155;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .text code {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+    </style>
+    <script src="./demo-score.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <h1 style="font-weight: 800;">DEMO-SCORE Web Component</h1>
+            <p>Hover the component or the "DEMO-SCORE" text to see tooltips.</p>
+        </div>
+
+        <div class="card">
+            <div class="text">
+                <h2 style="margin:0 0 5px 0">Draft Level (FR)</h2>
+                <code>&lt;demo-score level="D" version="v0.1.0" lang="fr"&gt;&lt;/demo-score&gt;</code>
+            </div>
+            <demo-score level="D" version="v0.1.0" lang="fr"></demo-score>
+        </div>
+
+        <div class="card">
+            <div class="text">
+                <h2 style="margin:0 0 5px 0">Mature Level (EN)</h2>
+                <code>&lt;demo-score level="M" version="v2.4.1" lang="en"&gt;&lt;/demo-score&gt;</code>
+            </div>
+            <demo-score level="M" version="v2.4.1" lang="en"></demo-score>
+        </div>
+
+        <div class="card">
+            <div class="text">
+                <h2 style="margin:0 0 5px 0">Stable Level (EN)</h2>
+                <code>&lt;demo-score level="S" version="v3.0.0" lang="en"&gt;&lt;/demo-score&gt;</code>
+            </div>
+            <demo-score level="S" version="v3.0.0" lang="en"></demo-score>
+        </div>
+    </div>
+</body>
+
+</html>

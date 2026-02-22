@@ -1,0 +1,32 @@
+{
+  "name": "@hand-e/demo-score",
+  "version": "1.0.0",
+  "description": "A visual maturity indicator for components (Nutri-Score for Apps)",
+  "main": "demo-score.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run test",
+    "publish:public": "npm publish --access public"
+  },
+  "keywords": [
+    "web-components",
+    "demo",
+    "score",
+    "maturity",
+    "ui",
+    "angular",
+    "react",
+    "vue"
+  ],
+  "author": "hand-e",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hand-e/demo-score.git"
+  },
+  "devDependencies": {
+    "jsdom": "^28.1.0",
+    "vitest": "^4.0.18"
+  }
+}
