@@ -170,6 +170,48 @@ class DemoScore extends HTMLElement {
 
     this.render();
 
+    // Handle dynamically positioning tooltips
+    this._positionTooltips = () => {
+      const wrapper = this.shadowRoot.querySelector('.score-wrapper');
+      if (!wrapper) return;
+
+      const levelTooltip = this.shadowRoot.querySelector('.level-tooltip');
+      const globalTooltip = this.shadowRoot.querySelector('.global-tooltip');
+      if (!levelTooltip || !globalTooltip) return;
+
+      // Only position if we are hovered or focused
+      if (!wrapper.matches(':hover') && !wrapper.classList.contains('keyboard-focus')) return;
+
+      const vpWidth = window.innerWidth;
+      const vpHeight = window.innerHeight;
+
+      const check = (tt) => {
+        tt.classList.remove('tooltip-top', 'tooltip-right', 'tooltip-left');
+        let rect = tt.getBoundingClientRect();
+
+        // Vertical check
+        if (rect.bottom > vpHeight - 10) {
+          tt.classList.add('tooltip-top');
+          rect = tt.getBoundingClientRect(); // re-evaluate
+        }
+
+        // Horizontal check
+        if (rect.right > vpWidth - 10) {
+          tt.classList.add('tooltip-right');
+        } else if (rect.left < 10) {
+          tt.classList.add('tooltip-left');
+        }
+      };
+
+      check(levelTooltip);
+      check(globalTooltip);
+    };
+
+    this.addEventListener('mouseover', this._positionTooltips);
+    this.addEventListener('focus', this._positionTooltips);
+    document.addEventListener('scroll', this._positionTooltips, { passive: true, capture: true });
+    window.addEventListener('resize', this._positionTooltips, { passive: true });
+
     // Handle keyboard focus to show/hide tooltips
     this.addEventListener('focus', () => {
       const wrapper = this.shadowRoot.querySelector('.score-wrapper');
@@ -179,6 +221,13 @@ class DemoScore extends HTMLElement {
       const wrapper = this.shadowRoot.querySelector('.score-wrapper');
       if (wrapper) wrapper.classList.remove('keyboard-focus');
     });
+  }
+
+  disconnectedCallback() {
+    this.removeEventListener('mouseover', this._positionTooltips);
+    this.removeEventListener('focus', this._positionTooltips);
+    document.removeEventListener('scroll', this._positionTooltips, { capture: true });
+    window.removeEventListener('resize', this._positionTooltips);
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -265,7 +314,7 @@ class DemoScore extends HTMLElement {
           opacity: 0;
           visibility: hidden;
           margin-top: -0.5em;
-          transition: opacity 0.2s, margin-top 0.2s, visibility 0.2s;
+          transition: opacity 0.2s, margin-top 0.2s, margin-bottom 0.2s, visibility 0.2s;
         }
         .custom-tooltip::after {
           content: '';
@@ -308,6 +357,60 @@ class DemoScore extends HTMLElement {
         .title-hitbox:hover ~ .level-tooltip {
           opacity: 0 !important;
           visibility: hidden !important;
+        }
+
+        /* ----- DYNAMIC POSITIONING CLASSES ----- */
+        .custom-tooltip.tooltip-top {
+          top: auto;
+          bottom: 100%;
+          margin-top: 0;
+          margin-bottom: -0.5em;
+        }
+        .score-wrapper:hover .custom-tooltip.tooltip-top,
+        .score-wrapper.keyboard-focus .custom-tooltip.tooltip-top,
+        .title-hitbox:hover ~ .custom-tooltip.tooltip-top,
+        .custom-tooltip.tooltip-top:hover {
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+        .custom-tooltip.tooltip-top::after {
+          bottom: auto;
+          top: 100%;
+          border-color: var(--demo-score-tooltip-bg, #1e293b) transparent transparent transparent;
+        }
+
+        .level-tooltip.tooltip-top {
+          transform: translateX(-50%) translateY(-1.2em);
+        }
+        .global-tooltip.tooltip-top {
+          transform: translateX(-25%) translateY(-1.2em);
+        }
+
+        /* Horizontal Overflow Adjustments */
+        .custom-tooltip.tooltip-right {
+          left: auto;
+          right: -10%;
+          transform: translateX(0) translateY(1.2em);
+        }
+        .custom-tooltip.tooltip-right.tooltip-top {
+          transform: translateX(0) translateY(-1.2em);
+        }
+        .custom-tooltip.tooltip-right::after {
+          left: auto;
+          right: 25%;
+          transform: translateX(50%);
+        }
+
+        .custom-tooltip.tooltip-left {
+          left: -10%;
+          transform: translateX(0) translateY(1.2em);
+        }
+        .custom-tooltip.tooltip-left.tooltip-top {
+          transform: translateX(0) translateY(-1.2em);
+        }
+        .custom-tooltip.tooltip-left::after {
+          left: 25%;
+          transform: translateX(-50%);
         }
         
         .active-pill {
