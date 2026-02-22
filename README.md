@@ -1,5 +1,9 @@
 # DEMO-SCORE
 
+<p align="center">
+  <img src="assets/preview.webp" alt="DEMO-SCORE Hover interactions preview">
+</p>
+
 A visual maturity indicator for modern web components. DEMO-SCORE acts as a "Nutri-Score" for apps, providing 100% transparency on the maturity level of the underlying code and structure.
 
 Maintained by **hand-e**.
